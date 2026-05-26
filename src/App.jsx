@@ -3,7 +3,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import AuthPage from "./pages/AuthPage.tsx";
-import HomePage from "./pages/HomePage.tsx";
+import HomePage from "./pages/homePage.tsx";
 
 function App() {
   return (
