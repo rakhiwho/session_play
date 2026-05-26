@@ -1,5 +1,23 @@
+
+
+
+const API_URL = (import.meta as any).VITE_API_URL;
+import axios from "axios";
+import { useState } from "react";
+import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
+
+interface IUser {
+  name: string;
+  city: string;
+  country: string;
+  phoneNumber: string;
+}
+
+
 const verifyOtp = async ({ otp, user }: { otp: string; user: IUser }) => {
   try {
+    const navigate = useNavigate();
     setLoading(true);
 
     // VALIDATION
@@ -33,7 +51,7 @@ const verifyOtp = async ({ otp, user }: { otp: string; user: IUser }) => {
 
     // CREATE USER
     const createUser = await axios.post(
-      `${API_URL}/api/watched-duration/create`,
+      `${API_URL}/api/auth/create`,
       user,
       {
         withCredentials: true,
@@ -60,3 +78,7 @@ const verifyOtp = async ({ otp, user }: { otp: string; user: IUser }) => {
     setLoading(false);
   }
 };
+
+function setLoading(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}

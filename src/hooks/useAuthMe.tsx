@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = (import.meta as any).VITE_API_URL;
 
 export default function useAuthMe() {
   const [user, setUser] = useState(null);
