@@ -2,8 +2,8 @@ import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
-import AuthPage from "./pages/AuthPage";
-import HomePage from "./pages/HomePage";
+import AuthPage from "./pages/AuthPage.tsx";
+import HomePage from "./pages/HomePage.tsx";
 
 function App() {
   return (
