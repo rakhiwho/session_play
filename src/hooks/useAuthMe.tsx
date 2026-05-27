@@ -14,6 +14,8 @@ export default function useAuthMe() {
       .get(`${API_URL}/api/auth/me`, { withCredentials: true })
       .then((res) => {
         setUser(res.data.user);
+                localStorage.setItem("user", JSON.stringify(res.data.user.phoneNumber));
+        localStorage.setItem("name", JSON.stringify(res.data.user.phoneNumber));
         setError(null);
       })
       .catch((err) => {
