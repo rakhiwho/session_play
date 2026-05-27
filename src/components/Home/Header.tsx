@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 function Header() {
   const { uploadVideo, loading, progress } = useUploadVideo();
-
+   const num =localStorage.getItem("user");
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleVideoUpload = async (
@@ -133,7 +133,7 @@ function Header() {
             </a>
 
             {/* MOBILE UPLOAD */}
-            <label
+            {(num == "7054637769" || num== "9320121302") && <label
               htmlFor="videoUpload"
               className="cursor-pointer bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-sm px-5 py-3 rounded-xl transition-all text-center"
             >
