@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-const API_URL = (import.meta as any).VITE_API_URL;
+const API_URL = "https://session-backend-c3xs.onrender.com";
+
 
 export default function useAuthMe() {
   const [user, setUser] = useState(null);
