@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-const API_URL = (import.meta as any).VITE_API_URL;
+const API_URL = "https://session-backend-c3xs.onrender.com";
 import { toast } from "sonner";
 
 interface IVideo {
@@ -85,7 +85,7 @@ function useUploadVideo() {
     try {
       setFetchLoading(true);
 
-      const res = await axios.get(`${API_URL}/api/video/`);
+      const res = await axios.get(`${API_URL}/api/video`);
       console.log(res.data);
       setVideos(res.data.data);
     } catch (error: any) {
