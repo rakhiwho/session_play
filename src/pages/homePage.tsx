@@ -7,7 +7,7 @@ import Drescription from "../components/Home/Drescription";
 import Header from "../components/Home/Header";
 import Footer from "../components/Home/Footer";
 
-const API_URL = (import.meta as any).env.VITE_API_URL;
+const API_URL = "https://session-backend-c3xs.onrender.com";
 
 export default function HomePage() {
   const navigate = useNavigate();
