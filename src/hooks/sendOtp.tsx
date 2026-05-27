@@ -85,7 +85,7 @@ function UseAuth() {
 
       console.log("USER:", createUser.data);
          
-      localStorage.setItem("user", `${JSON.stringify(user)}`);
+     // localStorage.setItem("user", `${JSON.stringify(user)}`);
 
       toast.success("User Created Successfully");
 
