@@ -1,7 +1,7 @@
 
 
+ const API_URL = "https://session-backend-c3xs.onrender.com";
 
-const API_URL = (import.meta as any).VITE_API_URL;
 import axios from "axios";
 import { useState } from "react";
 import { toast } from "sonner";
