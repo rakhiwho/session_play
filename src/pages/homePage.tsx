@@ -34,6 +34,8 @@ const name = localStorage.getItem('username');
       // IF USER LOGGED IN
       if (response.data.success) {
         setUser(response.data.user);
+         localStorage.setItem("user", JSON.stringify(response.data.user.phoneNumber));
+        localStorage.setItem("name", JSON.stringify(response.data.user.phoneNumber));
       } else {
         navigate("/auth");
       }
