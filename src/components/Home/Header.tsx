@@ -138,7 +138,7 @@ function Header() {
               className="cursor-pointer bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-sm px-5 py-3 rounded-xl transition-all text-center"
             >
               Upload Video
-            </label>
+            </label>}
           </div>
         </div>
       )}
